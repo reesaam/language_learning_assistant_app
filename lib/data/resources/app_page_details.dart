@@ -1,83 +1,73 @@
 import 'package:language_learning_assistant_app/core/routes/app_routes.dart';
 import 'package:language_learning_assistant_app/data/data_models/core_data_models/app_page_detail/app_page_detail.dart';
+import 'package:language_learning_assistant_app/data/resources/app_texts.dart';
 
 class AppPageDetails {
   ///Admin Pages
-  static AppPageDetail adminStartPage = const AppPageDetail(
-    pageName: 'Admin Start Page',
+  static AppPageDetail adminStartPage = AppPageDetail(
+    pageName: AppTexts.adminPageAdminStartPage,
     pageRoute: AppRoutes.adminStartPage,
     bottomBarItemNumber: -1,
-    bottomBarIcon: null,
   );
 
-  static AppPageDetail adminPagesTestPage = const AppPageDetail(
-    pageName: 'Admin Pages Test Page',
+  static AppPageDetail adminPagesTestPage = AppPageDetail(
+    pageName: AppTexts.adminPageAdminPagesTestPage,
     pageRoute: AppRoutes.adminPagesTestPage,
     bottomBarItemNumber: -1,
-    bottomBarIcon: null,
   );
 
-  static AppPageDetail adminUITestPage = const AppPageDetail(
-    pageName: 'Admin UI Test Page',
+  static AppPageDetail adminUITestPage = AppPageDetail(
+    pageName: AppTexts.adminPageAdminUITestPage,
     pageRoute: AppRoutes.adminUITestPage,
     bottomBarItemNumber: -1,
-    bottomBarIcon: null,
   );
 
   ///Main Pages
-  static AppPageDetail splashScreen = const AppPageDetail(
-    pageName: 'Splash Screen',
+  static AppPageDetail splashScreen = AppPageDetail(
+    pageName: AppTexts.pageSplashScreen,
     pageRoute: AppRoutes.splashScreen,
     bottomBarItemNumber: -1,
-    bottomBarIcon: null,
   );
 
-  static AppPageDetail homepage = const AppPageDetail(
-    pageName: 'Home',
+  static AppPageDetail homepage = AppPageDetail(
+    pageName: AppTexts.pageHomepage,
     pageRoute: AppRoutes.homePage,
     bottomBarItemNumber: 0,
-    bottomBarIcon: 'home',
   );
 
-  static AppPageDetail dictionary = const AppPageDetail(
-    pageName: 'Dictionary',
+  static AppPageDetail dictionary = AppPageDetail(
+    pageName: AppTexts.pageDictionary,
     pageRoute: AppRoutes.dictionary,
     bottomBarItemNumber: 1,
-    bottomBarIcon: 'dictionary',
   );
 
-  static AppPageDetail verbs = const AppPageDetail(
-    pageName: 'Verbs',
+  static AppPageDetail verbs = AppPageDetail(
+    pageName: AppTexts.pageVerbs,
     pageRoute: AppRoutes.verbs,
     bottomBarItemNumber: 2,
-    bottomBarIcon: 'verbs',
   );
 
-  static AppPageDetail words = const AppPageDetail(
-    pageName: 'Words',
+  static AppPageDetail words = AppPageDetail(
+    pageName: AppTexts.pageWords,
     pageRoute: AppRoutes.words,
     bottomBarItemNumber: 3,
-    bottomBarIcon: 'words',
   );
 
-  static AppPageDetail saved = const AppPageDetail(
-    pageName: 'Saved',
+  static AppPageDetail saved = AppPageDetail(
+    pageName: AppTexts.pageSaved,
     pageRoute: AppRoutes.saved,
     bottomBarItemNumber: 4,
-    bottomBarIcon: 'saved',
   );
 
-  static AppPageDetail settings = const AppPageDetail(
-    pageName: 'Settings',
+  static AppPageDetail settings = AppPageDetail(
+    pageName: AppTexts.pageSettings,
     pageRoute: AppRoutes.settings,
     bottomBarItemNumber: 5,
-    bottomBarIcon: 'settings',
   );
 
-  static AppPageDetail update = const AppPageDetail(
-    pageName: 'Update',
+  static AppPageDetail update = AppPageDetail(
+    pageName: AppTexts.pageUpdate,
     pageRoute: AppRoutes.update,
     bottomBarItemNumber: -1,
-    bottomBarIcon: null,
   );
 }

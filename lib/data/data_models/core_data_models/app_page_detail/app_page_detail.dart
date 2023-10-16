@@ -9,7 +9,6 @@ class AppPageDetail with _$AppPageDetail {
     final String? pageName,
     final String? pageRoute,
     final int? bottomBarItemNumber,
-    final String? bottomBarIcon,
   }) = _AppPageDetail;
 
   factory AppPageDetail.fromJson(Map<String, dynamic> json) =>

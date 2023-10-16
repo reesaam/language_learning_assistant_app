@@ -11,7 +11,6 @@ _$AppPageDetailImpl _$$AppPageDetailImplFromJson(Map<String, dynamic> json) =>
       pageName: json['pageName'] as String?,
       pageRoute: json['pageRoute'] as String?,
       bottomBarItemNumber: json['bottomBarItemNumber'] as int?,
-      bottomBarIcon: json['bottomBarIcon'] as String?,
     );
 
 Map<String, dynamic> _$$AppPageDetailImplToJson(_$AppPageDetailImpl instance) =>
@@ -19,7 +18,6 @@ Map<String, dynamic> _$$AppPageDetailImplToJson(_$AppPageDetailImpl instance) =>
       'pageName': instance.pageName,
       'pageRoute': instance.pageRoute,
       'bottomBarItemNumber': instance.bottomBarItemNumber,
-      'bottomBarIcon': instance.bottomBarIcon,
     };
 
 _$AppPageDetailsListImpl _$$AppPageDetailsListImplFromJson(

@@ -1,4 +1,17 @@
 class AppTexts {
+  ///App Pages
+  static String get pageHomepage => 'Home';
+  static String get pageSplashScreen => 'Splash Screen';
+  static String get pageDictionary => 'Dictionary';
+  static String get pageVerbs => 'Verbs';
+  static String get pageWords => 'Words';
+  static String get pageSaved => 'Saved';
+  static String get pageSettings => 'Settings';
+  static String get pageUpdate => 'Update';
+  static String get adminPageAdminStartPage => 'Admin Start Page';
+  static String get adminPageAdminPagesTestPage => 'Admin Pages Test Page';
+  static String get adminPageAdminUITestPage => 'Admin UI Test Page';
+
   ///General
   static String get generalVersion => 'Version';
   static String get generalOK => 'OK';

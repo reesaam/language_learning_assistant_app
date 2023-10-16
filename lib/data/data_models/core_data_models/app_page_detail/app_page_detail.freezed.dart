@@ -23,7 +23,6 @@ mixin _$AppPageDetail {
   String? get pageName => throw _privateConstructorUsedError;
   String? get pageRoute => throw _privateConstructorUsedError;
   int? get bottomBarItemNumber => throw _privateConstructorUsedError;
-  String? get bottomBarIcon => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,11 +36,7 @@ abstract class $AppPageDetailCopyWith<$Res> {
           AppPageDetail value, $Res Function(AppPageDetail) then) =
       _$AppPageDetailCopyWithImpl<$Res, AppPageDetail>;
   @useResult
-  $Res call(
-      {String? pageName,
-      String? pageRoute,
-      int? bottomBarItemNumber,
-      String? bottomBarIcon});
+  $Res call({String? pageName, String? pageRoute, int? bottomBarItemNumber});
 }
 
 /// @nodoc
@@ -60,7 +55,6 @@ class _$AppPageDetailCopyWithImpl<$Res, $Val extends AppPageDetail>
     Object? pageName = freezed,
     Object? pageRoute = freezed,
     Object? bottomBarItemNumber = freezed,
-    Object? bottomBarIcon = freezed,
   }) {
     return _then(_value.copyWith(
       pageName: freezed == pageName
@@ -75,10 +69,6 @@ class _$AppPageDetailCopyWithImpl<$Res, $Val extends AppPageDetail>
           ? _value.bottomBarItemNumber
           : bottomBarItemNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      bottomBarIcon: freezed == bottomBarIcon
-          ? _value.bottomBarIcon
-          : bottomBarIcon // ignore: cast_nullable_to_non_nullable
-              as String?,
     ) as $Val);
   }
 }
@@ -91,11 +81,7 @@ abstract class _$$AppPageDetailImplCopyWith<$Res>
       __$$AppPageDetailImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? pageName,
-      String? pageRoute,
-      int? bottomBarItemNumber,
-      String? bottomBarIcon});
+  $Res call({String? pageName, String? pageRoute, int? bottomBarItemNumber});
 }
 
 /// @nodoc
@@ -112,7 +98,6 @@ class __$$AppPageDetailImplCopyWithImpl<$Res>
     Object? pageName = freezed,
     Object? pageRoute = freezed,
     Object? bottomBarItemNumber = freezed,
-    Object? bottomBarIcon = freezed,
   }) {
     return _then(_$AppPageDetailImpl(
       pageName: freezed == pageName
@@ -127,10 +112,6 @@ class __$$AppPageDetailImplCopyWithImpl<$Res>
           ? _value.bottomBarItemNumber
           : bottomBarItemNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      bottomBarIcon: freezed == bottomBarIcon
-          ? _value.bottomBarIcon
-          : bottomBarIcon // ignore: cast_nullable_to_non_nullable
-              as String?,
     ));
   }
 }
@@ -139,10 +120,7 @@ class __$$AppPageDetailImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AppPageDetailImpl implements _AppPageDetail {
   const _$AppPageDetailImpl(
-      {this.pageName,
-      this.pageRoute,
-      this.bottomBarItemNumber,
-      this.bottomBarIcon});
+      {this.pageName, this.pageRoute, this.bottomBarItemNumber});
 
   factory _$AppPageDetailImpl.fromJson(Map<String, dynamic> json) =>
       _$$AppPageDetailImplFromJson(json);
@@ -153,12 +131,10 @@ class _$AppPageDetailImpl implements _AppPageDetail {
   final String? pageRoute;
   @override
   final int? bottomBarItemNumber;
-  @override
-  final String? bottomBarIcon;
 
   @override
   String toString() {
-    return 'AppPageDetail(pageName: $pageName, pageRoute: $pageRoute, bottomBarItemNumber: $bottomBarItemNumber, bottomBarIcon: $bottomBarIcon)';
+    return 'AppPageDetail(pageName: $pageName, pageRoute: $pageRoute, bottomBarItemNumber: $bottomBarItemNumber)';
   }
 
   @JsonKey(ignore: true)
@@ -179,8 +155,7 @@ abstract class _AppPageDetail implements AppPageDetail {
   const factory _AppPageDetail(
       {final String? pageName,
       final String? pageRoute,
-      final int? bottomBarItemNumber,
-      final String? bottomBarIcon}) = _$AppPageDetailImpl;
+      final int? bottomBarItemNumber}) = _$AppPageDetailImpl;
 
   factory _AppPageDetail.fromJson(Map<String, dynamic> json) =
       _$AppPageDetailImpl.fromJson;
@@ -191,8 +166,6 @@ abstract class _AppPageDetail implements AppPageDetail {
   String? get pageRoute;
   @override
   int? get bottomBarItemNumber;
-  @override
-  String? get bottomBarIcon;
   @override
   @JsonKey(ignore: true)
   _$$AppPageDetailImplCopyWith<_$AppPageDetailImpl> get copyWith =>

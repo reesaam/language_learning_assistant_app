@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:language_learning_assistant_app/data/extensions/data_types_extensions/extension_icon.dart';
+import 'package:language_learning_assistant_app/data/resources/app_colors.dart';
 import 'package:language_learning_assistant_app/data/resources/app_enums.dart';
 import 'package:language_learning_assistant_app/data/resources/app_icons.dart';
 import 'package:language_learning_assistant_app/data/resources/app_page_details.dart';
@@ -6,37 +8,41 @@ import 'package:language_learning_assistant_app/data/resources/app_page_details.
 class AppBottomNavigationBarData {
   List<BottomNavigationBarItem> getData() => <BottomNavigationBarItem>[
         ///HomePage
-        BottomNavigationBarItem(
-            icon: _createIcon(AppBottomNavigationPages.homepage),
-            label: _createLabel(AppPageDetails.homepage.pageName)),
+        _generateBottomNavigationBarItem(AppBottomNavigationPages.homepage,
+            AppPageDetails.homepage.pageName),
 
         ///Dictionary
-        BottomNavigationBarItem(
-            icon: _createIcon(AppBottomNavigationPages.dictionary),
-            label: _createLabel(AppPageDetails.dictionary.pageName)),
+        _generateBottomNavigationBarItem(AppBottomNavigationPages.dictionary,
+            AppPageDetails.dictionary.pageName),
 
         ///Verbs
-        BottomNavigationBarItem(
-            icon: _createIcon(AppBottomNavigationPages.verbs),
-            label: _createLabel(AppPageDetails.verbs.pageName)),
+        _generateBottomNavigationBarItem(
+            AppBottomNavigationPages.verbs, AppPageDetails.verbs.pageName),
 
         ///Words
-        BottomNavigationBarItem(
-            icon: _createIcon(AppBottomNavigationPages.words),
-            label: _createLabel(AppPageDetails.words.pageName)),
+        _generateBottomNavigationBarItem(
+            AppBottomNavigationPages.words, AppPageDetails.words.pageName),
 
         ///Saved
-        BottomNavigationBarItem(
-            icon: _createIcon(AppBottomNavigationPages.saved),
-            label: _createLabel(AppPageDetails.saved.pageName)),
+        _generateBottomNavigationBarItem(
+            AppBottomNavigationPages.saved, AppPageDetails.saved.pageName),
 
         ///Settings
-        BottomNavigationBarItem(
-            icon: _createIcon(AppBottomNavigationPages.settings),
-            label: _createLabel(AppPageDetails.settings.pageName)),
+        _generateBottomNavigationBarItem(AppBottomNavigationPages.settings,
+            AppPageDetails.settings.pageName),
       ];
 
-  Widget _createIcon(AppBottomNavigationPages page) {
+  BottomNavigationBarItem _generateBottomNavigationBarItem(
+          AppBottomNavigationPages page, String? label) =>
+      BottomNavigationBarItem(
+          activeIcon: CircleAvatar(
+              backgroundColor: AppColors.textNormalWhite,
+              foregroundColor: AppColors.textNormal,
+              child: _createIcon(page).withColor(AppColors.textNormal)),
+          icon: _createIcon(page),
+          label: _createLabel(label));
+
+  Icon _createIcon(AppBottomNavigationPages page) {
     Icon icon = const Icon(Icons.not_interested);
     switch (page) {
       case (AppBottomNavigationPages.homepage):
