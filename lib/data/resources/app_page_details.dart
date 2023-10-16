@@ -33,16 +33,44 @@ class AppPageDetails {
   );
 
   static AppPageDetail homepage = const AppPageDetail(
-    pageName: 'Home Page',
+    pageName: 'Home',
     pageRoute: AppRoutes.homePage,
     bottomBarItemNumber: 0,
     bottomBarIcon: 'home',
   );
 
+  static AppPageDetail dictionary = const AppPageDetail(
+    pageName: 'Dictionary',
+    pageRoute: AppRoutes.dictionary,
+    bottomBarItemNumber: 1,
+    bottomBarIcon: 'dictionary',
+  );
+
+  static AppPageDetail verbs = const AppPageDetail(
+    pageName: 'Verbs',
+    pageRoute: AppRoutes.verbs,
+    bottomBarItemNumber: 2,
+    bottomBarIcon: 'verbs',
+  );
+
+  static AppPageDetail words = const AppPageDetail(
+    pageName: 'Words',
+    pageRoute: AppRoutes.words,
+    bottomBarItemNumber: 3,
+    bottomBarIcon: 'words',
+  );
+
+  static AppPageDetail saved = const AppPageDetail(
+    pageName: 'Saved',
+    pageRoute: AppRoutes.saved,
+    bottomBarItemNumber: 4,
+    bottomBarIcon: 'saved',
+  );
+
   static AppPageDetail settings = const AppPageDetail(
     pageName: 'Settings',
     pageRoute: AppRoutes.settings,
-    bottomBarItemNumber: 4,
+    bottomBarItemNumber: 5,
     bottomBarIcon: 'settings',
   );
 

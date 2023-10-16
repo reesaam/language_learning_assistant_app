@@ -4,6 +4,10 @@ class AppRoutes {
   ///Main Pages
   static const String splashScreen = '/splash_screen';
   static const String homePage = '/homepage';
+  static const String dictionary = '/dictionary';
+  static const String verbs = '/verbs';
+  static const String words = '/words';
+  static const String saved = '/saved';
   static const String settings = '/settings';
   static const String update = '/update';
 
