@@ -16,6 +16,7 @@ class AppIcons {
   static Icon get saved => const Icon(Icons.bookmark_rounded);
   static Icon get grammar => const Icon(Icons.assignment_turned_in_rounded);
   static Icon get settings => const Icon(Icons.settings_rounded);
+  static Icon get about => const Icon(Icons.info_outline_rounded);
   static Icon get profile => const Icon(Icons.account_circle_rounded);
 
   ///BottomNavigationBar Icons

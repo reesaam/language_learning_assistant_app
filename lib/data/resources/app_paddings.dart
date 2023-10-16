@@ -21,4 +21,7 @@ class AppPaddings {
   static EdgeInsets get homepageTopBar => const EdgeInsets.fromLTRB(20, 30, 20, 30);
   static EdgeInsets get homepageDateTimeCard => const EdgeInsets.fromLTRB(0, 20, 0, 20);
   static EdgeInsets get homepageDateTimeCardSettingIcon => const EdgeInsets.fromLTRB(0, 10, 10, 0);
+
+  ///Update
+  static EdgeInsets get updateButtons => const EdgeInsets.fromLTRB(50, 0, 50, 0);
 }
