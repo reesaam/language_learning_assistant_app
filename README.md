@@ -31,7 +31,7 @@ flutter build web --web-renderer canvaskit --release
 
 
 ## Others
-# Launcher Icon
+### Launcher Icon
 - For any possible change in Launcher Icon
 - first change the file in assets : <<assets/logos/paria_logo.png>> (Please replace the file)
 - the run:
