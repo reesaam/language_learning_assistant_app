@@ -6,8 +6,8 @@ import 'package:language_learning_assistant_app/app/components/main_components/a
 import 'package:language_learning_assistant_app/app/controllers/homepage_controller.dart';
 import 'package:language_learning_assistant_app/core/elements/core_view.dart';
 import 'package:language_learning_assistant_app/data/extensions/data_types_extensions/extension_icon.dart';
+import 'package:language_learning_assistant_app/data/info/app_info.dart';
 import 'package:language_learning_assistant_app/data/resources/app_icons.dart';
-import 'package:language_learning_assistant_app/data/resources/app_info.dart';
 import 'package:language_learning_assistant_app/data/resources/app_logos.dart';
 import 'package:language_learning_assistant_app/data/resources/app_paddings.dart';
 import 'package:language_learning_assistant_app/data/resources/app_sizes.dart';

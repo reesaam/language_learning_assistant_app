@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:language_learning_assistant_app/core/app_core_functions.dart';
 import 'package:language_learning_assistant_app/core/elements/core_controller.dart';
 import 'package:language_learning_assistant_app/data/extensions/data_types_extensions/extension_date_time.dart';
-import 'package:language_learning_assistant_app/data/resources/app_page_details.dart';
+import 'package:language_learning_assistant_app/data/info/app_page_details.dart';
 
 class HomePageController extends CoreController {
 

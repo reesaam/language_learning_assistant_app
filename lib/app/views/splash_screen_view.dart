@@ -13,7 +13,7 @@ class SplashScreenPage extends CoreView<SplashScreenController> {
       AppAppBar(pageDetail: controller.pageDetail);
 
   @override
-  Widget? get drawer => const AppDrawer();
+  Widget? get drawer => null;
 
   @override
   Widget? get topBar => null;
@@ -22,8 +22,7 @@ class SplashScreenPage extends CoreView<SplashScreenController> {
   Widget? get footer => null;
 
   @override
-  Widget? get bottomNavigationBar => AppBottomNavigationBar(
-      selectedIndex: controller.pageDetail.bottomBarItemNumber);
+  Widget? get bottomNavigationBar => null;
 
   @override
   Widget? get floatingActionButton => null;
