@@ -47,22 +47,22 @@ class AppPageDetails {
     bottomBarItemNumber: 2,
   );
 
-  static AppPageDetail words = AppPageDetail(
-    pageName: AppTexts.pageWords,
-    pageRoute: AppRoutes.words,
-    bottomBarItemNumber: 3,
-  );
-
   static AppPageDetail saved = AppPageDetail(
     pageName: AppTexts.pageSaved,
     pageRoute: AppRoutes.saved,
-    bottomBarItemNumber: 4,
+    bottomBarItemNumber: 3,
   );
 
   static AppPageDetail settings = AppPageDetail(
     pageName: AppTexts.pageSettings,
     pageRoute: AppRoutes.settings,
-    bottomBarItemNumber: 5,
+    bottomBarItemNumber: 4,
+  );
+
+  static AppPageDetail about = AppPageDetail(
+    pageName: AppTexts.pageAbout,
+    pageRoute: AppRoutes.about,
+    bottomBarItemNumber: -1,
   );
 
   static AppPageDetail update = AppPageDetail(

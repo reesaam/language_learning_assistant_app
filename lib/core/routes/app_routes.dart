@@ -9,6 +9,7 @@ class AppRoutes {
   static const String words = '/words';
   static const String saved = '/saved';
   static const String settings = '/settings';
+  static const String about = '/about';
   static const String update = '/update';
 
   ///Other Pages

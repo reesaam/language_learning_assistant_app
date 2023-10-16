@@ -8,6 +8,7 @@ class AppTexts {
   static String get pageSaved => 'Saved';
   static String get pageSettings => 'Settings';
   static String get pageUpdate => 'Update';
+  static String get pageAbout => 'About';
   static String get adminPageAdminStartPage => 'Admin Start Page';
   static String get adminPageAdminPagesTestPage => 'Admin Pages Test Page';
   static String get adminPageAdminUITestPage => 'Admin UI Test Page';
