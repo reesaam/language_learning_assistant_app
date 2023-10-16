@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:paria_app/data/resources/app_text_styles.dart';
+import 'package:language_learning_assistant_app/data/resources/app_text_styles.dart';
 
 class AppPopupMenuItem extends PopupMenuItem {
   const AppPopupMenuItem({
