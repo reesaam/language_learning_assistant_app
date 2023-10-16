@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:language_learning_assistant_app/data/extensions/data_types_extensions/extension_icon.dart';
+import 'package:language_learning_assistant_app/data/info/app_page_details.dart';
 import 'package:language_learning_assistant_app/data/resources/app_colors.dart';
 import 'package:language_learning_assistant_app/data/resources/app_enums.dart';
 import 'package:language_learning_assistant_app/data/resources/app_icons.dart';
-import 'package:language_learning_assistant_app/data/resources/app_page_details.dart';
 
 class AppBottomNavigationBarData {
   List<BottomNavigationBarItem> getData() => <BottomNavigationBarItem>[

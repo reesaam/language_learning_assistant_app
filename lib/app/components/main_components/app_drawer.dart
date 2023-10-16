@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:language_learning_assistant_app/app/components/general_components/app_dividers.dart';
+import 'package:language_learning_assistant_app/core/app_core_functions.dart';
+import 'package:language_learning_assistant_app/data/data_models/core_data_models/app_page_detail/app_page_detail.dart';
+import 'package:language_learning_assistant_app/data/info/app_info.dart';
+import 'package:language_learning_assistant_app/data/info/app_page_details.dart';
 import 'package:language_learning_assistant_app/data/resources/app_icons.dart';
-import 'package:language_learning_assistant_app/data/resources/app_info.dart';
 import 'package:language_learning_assistant_app/data/resources/app_logos.dart';
 import 'package:language_learning_assistant_app/data/resources/app_paddings.dart';
 import 'package:language_learning_assistant_app/data/resources/app_sizes.dart';
@@ -33,13 +36,29 @@ class AppDrawer extends Drawer {
         Text(AppInfo.appNameTwoLines),
       ]));
 
-  Widget body() => Container(child: Text('Body'));
+  Widget body() => Column(children: [
+        _bodyItem(AppPageDetails.homepage, AppIcons.home),
+        _bodyItem(AppPageDetails.dictionary, AppIcons.dictionary),
+        _bodyItem(AppPageDetails.verbs, AppIcons.verbs),
+        _bodyItem(AppPageDetails.saved, AppIcons.saved),
+        _bodyItem(AppPageDetails.settings, AppIcons.settings),
+        _bodyItem(AppPageDetails.about, AppIcons.about),
+      ]);
+
+  Widget _bodyItem(AppPageDetail page, Icon icon) => ListTile(
+        title: Text(page.pageName!),
+        leading: icon,
+        onTap: () => {Get.back(), goToPage(page)},
+      );
 
   Widget footer() => Container(
       padding: AppPaddings.drawerFooter,
       child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
         AppIcons.version,
         AppSpaces.w20,
-        Text('${AppTexts.generalVersion}: ${AppInfo.appCurrentVersion}'),
+        InkWell(
+          onTap: () => goToPage(AppPageDetails.update),
+            child: Text(
+                '${AppTexts.generalVersion}: ${AppInfo.appCurrentVersion}')),
       ]));
 }

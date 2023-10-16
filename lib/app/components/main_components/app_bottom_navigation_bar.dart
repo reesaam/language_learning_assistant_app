@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:language_learning_assistant_app/core/app_core_functions.dart';
-import 'package:language_learning_assistant_app/core/routes/app_routes.dart';
-import 'package:language_learning_assistant_app/data/resources/app_bottom_navigation_bar_data.dart';
+import 'package:language_learning_assistant_app/app/components/main_components/app_bottom_navigation_bar_data.dart';
+import 'package:language_learning_assistant_app/data/info/app_page_details.dart';
 import 'package:language_learning_assistant_app/data/resources/app_colors.dart';
 
 class AppBottomNavigationBar extends StatefulWidget {
@@ -20,12 +20,11 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
   void _onItemTap(int index) {
     selectedIndex.value = index;
     switch(index) {
-      case 0 : goToPage(AppRoutes.homePage);
-      case 1 : goToPage(AppRoutes.dictionary);
-      case 2 : goToPage(AppRoutes.verbs);
-      case 3 : goToPage(AppRoutes.words);
-      case 4 : goToPage(AppRoutes.saved);
-      case 5 : goToPage(AppRoutes.settings);
+      case 0 : goToPage(AppPageDetails.homepage);
+      case 1 : goToPage(AppPageDetails.dictionary);
+      case 2 : goToPage(AppPageDetails.verbs);
+      case 3 : goToPage(AppPageDetails.saved);
+      case 4 : goToPage(AppPageDetails.settings);
       default: break;
     }
     Get.reload();
