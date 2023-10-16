@@ -2,7 +2,7 @@ class AppTexts {
   ///App Pages
   static String get pageHomepage => 'Home';
   static String get pageSplashScreen => 'Splash Screen';
-  static String get pageDictionary => 'Dictionary';
+  static String get pageDictionary => 'Dic';
   static String get pageVerbs => 'Verbs';
   static String get pageWords => 'Words';
   static String get pageSaved => 'Saved';

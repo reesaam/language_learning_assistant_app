@@ -7,6 +7,7 @@ class AppIcons {
 
   ///General
   static Icon get close => const Icon(Icons.close_rounded);
+  static Icon get version => const Icon(Icons.info_outline_rounded);
 
   ///Icons
   static Icon get home => const Icon(Icons.home_rounded);

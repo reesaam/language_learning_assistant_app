@@ -5,7 +5,7 @@ class AppColors {
   ///Basics
   static Color get transparent => Colors.transparent;
   static Color get appBackground => _white;
-  static Color get appDefaultColor => _coral.withOpacity(0.8);
+  static Color get appDefaultColor => _grey;
 
   ///Colors
   static Color get _white => Colors.white;

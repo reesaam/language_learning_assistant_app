@@ -10,6 +10,9 @@ class AppTextStyles {
   static get titleSize => defaultSize + 5;
   static get bigTitleSize => defaultSize + 8;
 
+  ///Card
+  static TextStyle get cardTitle => TextStyle(color: AppColors.cardText, fontSize: bigSize);
+
   ///AppBar
   static TextStyle get appBarTitle => TextStyle(color: AppColors.appBarText, fontSize: bigTitleSize);
 

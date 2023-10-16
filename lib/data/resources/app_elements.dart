@@ -3,6 +3,8 @@ import 'package:language_learning_assistant_app/data/resources/app_colors.dart';
 
 class AppElements {
 
+  static double get defaultBorderWidth => 2;
+  
   ///Radius
   static double get radiusZero => 0;
   static double get radiusLow => 10;
@@ -24,10 +26,10 @@ class AppElements {
   static BorderRadius get topBorderWithRadius => BorderRadius.only(topLeft: defaultBorderRadius, topRight: defaultBorderRadius);
 
   ///BorderSide
-  static BorderSide get defaultBorderSide => BorderSide(color: AppColors.textNormal, width: 2);
-  static BorderSide get cardTransparentBorderSide => BorderSide(color: AppColors.transparent, width: 2);
-  static BorderSide get defaultBorderSideFocused => BorderSide(color: AppColors.appDefaultColor, width: 2);
-  static BorderSide get defaultBorderSideDisabled => BorderSide(color: AppColors.buttonBackgroundDisabled, width: 2);
+  static BorderSide get defaultBorderSide => BorderSide(color: AppColors.textNormal, width: defaultBorderWidth);
+  static BorderSide get cardTransparentBorderSide => BorderSide(color: AppColors.transparent, width: defaultBorderWidth);
+  static BorderSide get defaultBorderSideFocused => BorderSide(color: AppColors.appDefaultColor, width: defaultBorderWidth);
+  static BorderSide get defaultBorderSideDisabled => BorderSide(color: AppColors.buttonBackgroundDisabled, width: defaultBorderWidth);
 
   ///OutlineInputBorder
   static OutlineInputBorder get defaultOutlineBorder => OutlineInputBorder(borderRadius: defaultBorderWithLowRadius, borderSide: defaultBorderSide);
