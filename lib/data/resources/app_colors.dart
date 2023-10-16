@@ -6,6 +6,7 @@ class AppColors {
   static Color get transparent => Colors.transparent;
   static Color get appBackground => _white;
   static Color get appDefaultColor => _grey;
+  static Color get appDefaultDisabledColor => _grey.withOpacity(0.5);
 
   ///Colors
   static Color get _white => Colors.white;
@@ -24,7 +25,7 @@ class AppColors {
   ///Text
   static Color get textNormal => _black;
   static Color get textNormalWhite => _white;
-  static Color get textDisabled => _grey;
+  static Color get textDisabled => appDefaultDisabledColor;
 
   ///Elements
   static Color get dividerDefaultColor => _black;
@@ -43,8 +44,8 @@ class AppColors {
   static Color get cardText => appDefaultColor;
 
   ///Button
-  static Color get  buttonBackgroundNormal => appDefaultColor;
-  static Color get  buttonBackgroundDisabled => appBackground;
+  static Color get  buttonBackgroundNormal => appBackground;
+  static Color get  buttonBackgroundDisabled => appDefaultDisabledColor;
   static Color get  buttonTextNormal => textNormal;
   static Color get  buttonTextDisabled => textDisabled;
 
