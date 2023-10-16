@@ -1,3 +1,12 @@
+enum AppBottomNavigationPages {
+  homepage,
+  dictionary,
+  verbs,
+  words,
+  saved,
+  settings,
+}
+
 enum AppRegions {
   en_us,
 }
@@ -12,9 +21,4 @@ enum AppCalendarTypes {
 
 enum AppStorageKeys {
   keySettings,
-}
-
-enum AppBottomNavigationPages {
-  homepage,
-  settings,
 }

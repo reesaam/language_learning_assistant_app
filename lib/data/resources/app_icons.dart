@@ -10,9 +10,19 @@ class AppIcons {
 
   ///Icons
   static Icon get home => const Icon(Icons.home_rounded);
+  static Icon get dictionary => const Icon(Icons.local_library_rounded);
+  static Icon get verbs => const Icon(Icons.assignment_rounded);
+  static Icon get words => const Icon(Icons.assignment_rounded);
+  static Icon get saved => const Icon(Icons.bookmark_rounded);
+  static Icon get grammar => const Icon(Icons.assignment_turned_in_rounded);
   static Icon get settings => const Icon(Icons.settings_rounded);
+  static Icon get profile => const Icon(Icons.account_circle_rounded);
 
   ///BottomNavigationBar Icons
   static Icon get bottomNavigationHomepage => home;
+  static Icon get bottomNavigationDictionary => dictionary;
+  static Icon get bottomNavigationVerbs => verbs;
+  static Icon get bottomNavigationWords => words;
+  static Icon get bottomNavigationSaved => saved;
   static Icon get bottomNavigationSettings => settings;
 }
