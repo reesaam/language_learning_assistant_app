@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:language_learning_assistant_app/app/components/app_dividers.dart';
+import 'package:language_learning_assistant_app/app/components/general_components/app_dividers.dart';
 import 'package:language_learning_assistant_app/app/components/buttons/app_general_button.dart';
 import 'package:language_learning_assistant_app/core/app_core_widgets.dart';
 import 'package:language_learning_assistant_app/data/resources/app_colors.dart';

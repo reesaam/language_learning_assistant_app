@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:language_learning_assistant_app/app/components/app_dividers.dart';
+import 'package:language_learning_assistant_app/app/components/general_components/app_dividers.dart';
 import 'package:language_learning_assistant_app/data/resources/app_icons.dart';
 import 'package:language_learning_assistant_app/data/resources/app_info.dart';
 import 'package:language_learning_assistant_app/data/resources/app_logos.dart';
