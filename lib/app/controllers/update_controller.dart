@@ -39,7 +39,7 @@ class UpdateController extends CoreController {
   void onInitFunction() {
     downloaded
         .listen((data) {})
-        .onData((data) => data == true ? Get.back() : null);
+        .onData((data) => data == true ? popPage() : null);
   }
 
   @override
@@ -60,7 +60,7 @@ class UpdateController extends CoreController {
     await Future.delayed(const Duration(seconds: 2));
     appDebugPrint('Current Version: ${AppInfo.appCurrentVersion}');
     appDebugPrint('Available Version: $version');
-    Get.back();
+    popPage();
     version == AppInfo.appCurrentVersion
         ? AppSnackBar.show(AppTexts.updateNoUpdateFound)
         : {

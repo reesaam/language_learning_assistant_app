@@ -17,6 +17,10 @@ void goToPage(AppPageDetail page) => page.bottomBarItemNumber == -1
     ? Get.toNamed(page.pageRoute!)
     : Get.offAllNamed(page.pageRoute!);
 
+void popPage() {
+  Get.back();
+}
+
 void saveAppData() {
   AppSharedPreferences.to.saveData();
 }

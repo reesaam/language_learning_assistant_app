@@ -73,7 +73,7 @@ class SettingsController extends CoreController {
 
   functionBackup() {
     function() async {
-      Get.back();
+      popPage();
       AppData appdata = AppLocalStorage.to.exportData();
       var jsonData = jsonEncode(appdata);
       Uint8List data = jsonData.toString().toUInt8List;
@@ -92,7 +92,7 @@ class SettingsController extends CoreController {
 
   functionRestore() {
     function() async {
-      Get.back();
+      popPage();
       OpenFileDialogParams openFileParams =
       const OpenFileDialogParams(dialogType: OpenFileDialogType.document);
       String? importFilePath = await FlutterFileDialog.pickFile(params: openFileParams);
@@ -115,7 +115,7 @@ class SettingsController extends CoreController {
   functionClearDictionary() {
     function() {
       AppLocalStorage.to.clearSpecificKey(AppStorageKeys.keyDictionary);
-      Get.back();
+      popPage();
       appDebugPrint('Dictionary Items Cleared');
     }
 
@@ -126,7 +126,7 @@ class SettingsController extends CoreController {
   functionClearVerbs() {
     function() {
       AppLocalStorage.to.clearSpecificKey(AppStorageKeys.keyVerbs);
-      Get.back();
+      popPage();
       appDebugPrint('Verbs Items Cleared');
     }
 
@@ -137,7 +137,7 @@ class SettingsController extends CoreController {
   functionClearSaved() {
     function() {
       AppLocalStorage.to.clearSpecificKey(AppStorageKeys.keySaved);
-      Get.back();
+      popPage();
       appDebugPrint('Saved Items Cleared');
     }
 
@@ -148,7 +148,7 @@ class SettingsController extends CoreController {
   functionClearAllData() {
     function() {
       clearAppData();
-      Get.back();
+      popPage();
       appDebugPrint('');
     }
 

@@ -48,7 +48,7 @@ class AppDrawer extends Drawer {
   Widget _bodyItem(AppPageDetail page, Icon icon) => ListTile(
         title: Text(page.pageName!),
         leading: icon,
-        onTap: () => {Get.back(), goToPage(page)},
+        onTap: () => {popPage(), goToPage(page)},
       );
 
   Widget footer() => Container(
