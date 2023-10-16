@@ -5,7 +5,7 @@ class AppColors {
   ///Basics
   static Color get transparent => Colors.transparent;
   static Color get appBackground => _white;
-  static Color get appDefaultColor => _coral;
+  static Color get appDefaultColor => _coral.withOpacity(0.8);
 
   ///Colors
   static Color get _white => Colors.white;
@@ -31,12 +31,12 @@ class AppColors {
 
   ///AppBar
   static Color get appBarBackground => appDefaultColor;
-  static Color get appBarText => textNormal;
+  static Color get appBarText => textNormalWhite;
 
   ///AppBottomBar
   static Color get bottomBarBackground => appDefaultColor;
-  static Color get bottomBarSelected => textNormal;
-  static Color get bottomBarUnselected => appBackground;
+  static Color get bottomBarSelected => textNormalWhite;
+  static Color get bottomBarUnselected => textNormal;
 
   ///Card
   static Color get cardBackground => appBackground;
