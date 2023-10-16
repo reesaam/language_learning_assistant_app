@@ -13,7 +13,9 @@ bool get isRelease => false;
 
 void appDebugPrint(message) => isRelease ? null : debugPrint('$message');
 
-void goToPage(String page) => Get.offAllNamed(page);
+void goToPage(AppPageDetail page) => page.bottomBarItemNumber == -1
+    ? Get.toNamed(page.pageRoute!)
+    : Get.offAllNamed(page.pageRoute!);
 
 void saveAppData() {
   AppSharedPreferences.to.saveData();
