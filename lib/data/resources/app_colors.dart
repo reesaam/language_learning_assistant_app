@@ -30,16 +30,17 @@ class AppColors {
   static Color get dividerDefaultColor => _black;
 
   ///AppBar
-  static Color get appBarBackground => appDefaultColor;
-  static Color get appBarText => textNormalWhite;
+  static Color get appBarBackground => appBackground;
+  static Color get appBarText => textNormal;
 
   ///AppBottomBar
-  static Color get bottomBarBackground => appDefaultColor;
-  static Color get bottomBarSelected => textNormalWhite;
+  static Color get bottomBarBackground => appBackground;
+  static Color get bottomBarSelected => textNormal;
   static Color get bottomBarUnselected => textNormal;
 
   ///Card
   static Color get cardBackground => appBackground;
+  static Color get cardText => appDefaultColor;
 
   ///Button
   static Color get  buttonBackgroundNormal => appDefaultColor;

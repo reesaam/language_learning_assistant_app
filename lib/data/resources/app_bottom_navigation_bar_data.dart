@@ -36,9 +36,9 @@ class AppBottomNavigationBarData {
           AppBottomNavigationPages page, String? label) =>
       BottomNavigationBarItem(
           activeIcon: CircleAvatar(
-              backgroundColor: AppColors.textNormalWhite,
+              backgroundColor: AppColors.textNormal,
               foregroundColor: AppColors.textNormal,
-              child: _createIcon(page).withColor(AppColors.textNormal)),
+              child: _createIcon(page).withColor(AppColors.textNormalWhite)),
           icon: _createIcon(page),
           label: _createLabel(label));
 

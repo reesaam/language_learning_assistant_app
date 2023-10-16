@@ -28,5 +28,5 @@ class AppAppBar extends AppBar {
   Color? get backgroundColor => AppColors.appBarBackground;
 
   @override
-  bool? get centerTitle => false;
+  bool? get centerTitle => true;
 }
