@@ -6,7 +6,7 @@ import 'package:language_learning_assistant_app/data/resources/app_fonts.dart';
 
 class AppThemes {
   static get mainTheme => ThemeData(
-        fontFamily: 'Roboto',
+        fontFamily: 'Ubuntu',
         appBarTheme: mainAppBar,
         bottomNavigationBarTheme: mainBottomBar,
         textTheme: textTheme,
