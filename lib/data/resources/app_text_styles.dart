@@ -13,6 +13,14 @@ class AppTextStyles {
   ///Card
   static TextStyle get cardTitle => TextStyle(color: AppColors.cardText, fontSize: bigSize);
 
+  ///Text Fields
+  static TextStyle get textFieldText => TextStyle(color: AppColors.textFieldText);
+  static TextStyle get textFieldLabel => TextStyle(color: AppColors.textFieldLabel);
+  static TextStyle get textFieldHint => TextStyle(color: AppColors.textFieldHint);
+
+  ///Popup Menu
+  static TextStyle get popupMenuItem => const TextStyle();
+
   ///AppBar
   static TextStyle get appBarTitle => TextStyle(color: AppColors.appBarText, fontSize: bigTitleSize);
 
@@ -22,4 +30,8 @@ class AppTextStyles {
   ///Dialogs
   static TextStyle get dialogAlertTitle => TextStyle(fontSize: titleSize);
   static TextStyle get dialogAlertText => TextStyle(fontSize: normalSize, color: AppColors.textNormal);
+
+  ///Settings
+  static TextStyle get settingsSectionTitle => TextStyle(fontSize: bigSize, color: AppColors.settingTitle);
+  static TextStyle get settingsSectionItem => TextStyle(color: AppColors.settingItem);
 }

@@ -13,6 +13,9 @@ class AppSizes {
   static double get iconButtonSize => 24;
   static double get popUpMenuButton => 20;
 
+  ///Elements
+  static Size get switchHeight => const Size.fromHeight(20);
+
   ///Homepage
   static double get homepageLogo => 60;
   static double get homepageSettingIcon => 15;

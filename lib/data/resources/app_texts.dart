@@ -51,7 +51,7 @@ class AppTexts {
   ///Homepage
   static String get homepageDateTimeTitle => 'Today';
   static String get homepageSummaryTitle => 'App Summary';
-  static List<String> get homepageSummaryItems => ['Contacts:', 'Records:', 'Total Balance:'];
+  static List<String> get homepageSummaryItems => ['Words:', 'Verbs:', 'Saved:'];
 
   ///Settings
   static String get settingAppbarMenuResetSettings => 'Reset All Settings';
@@ -70,11 +70,12 @@ class AppTexts {
   static String get settingSectionBackupRestore => 'Restore Data';
 
   static String get settingSectionTitleStorage => 'Storage';
-  static String get settingSectionStorageItemEraseContacts => 'Erase Contacts';
-  static String get settingSectionStorageItemEraseRecords => 'Erase Account Records';
+  static String get settingSectionStorageItemEraseDictionary => 'Erase Dictionary Items';
+  static String get settingSectionStorageItemEraseVerbs => 'Erase Verbs Items';
+  static String get settingSectionStorageItemEraseSaved => 'Erase Saved Items';
   static String get settingSectionStorageItemEraseAllData => 'Erase All Data';
 
-  static String get settingBackupFilename => 'PariaApp_Backup.json';
+  static String get settingBackupFilename => 'LLAA_Backup.json';
 
   ///Update
   static String get updateCurrentVersion => 'Current Version:';

@@ -6,6 +6,7 @@ class AppColors {
   static Color get transparent => Colors.transparent;
   static Color get appBackground => _white;
   static Color get appDefaultColor => _grey;
+  static Color get appDefaultColorSecond => _coral;
   static Color get appDefaultDisabledColor => _grey.withOpacity(0.5);
 
   ///Colors
@@ -49,7 +50,19 @@ class AppColors {
   static Color get  buttonTextNormal => textNormal;
   static Color get  buttonTextDisabled => textDisabled;
 
+  ///TextFields
+  static Color get textFieldText => _grey;
+  static Color get textFieldLabel => _grey;
+  static Color get textFieldHint => _grey;
+
   ///CheckBox
   static Color get appCheckBox => appBackground;
-  static Color get appCheckBoxTick => appDefaultColor;
+  static Color get appCheckBoxTick => appDefaultColorSecond;
+
+  ///Switch
+  static Color get switchActive => appDefaultColorSecond;
+
+  ///Settings
+  static Color get settingTitle => appDefaultColorSecond;
+  static Color get settingItem => _grey;
 }
