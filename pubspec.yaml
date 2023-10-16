@@ -46,7 +46,7 @@ flutter:
 
   assets:
     - assets/images/
-    - assets/logos/
+    - assets/icons/
     - assets/fonts/
 
   fonts:
