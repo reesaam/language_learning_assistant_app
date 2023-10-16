@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:language_learning_assistant_app/core/app_core_functions.dart';
@@ -14,6 +15,7 @@ abstract class CoreView<Controller extends CoreController>
 
   ///Main Widgets
   PreferredSizeWidget? get appBar;
+  Widget? get drawer;
   Widget get body;
   Widget? get topBar;
   Widget? get footer;
@@ -27,6 +29,9 @@ abstract class CoreView<Controller extends CoreController>
   Widget get _pageScaffold => Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: appBar,
+        drawer: drawer,
+        drawerEnableOpenDragGesture: true,
+        drawerEdgeDragWidth: Get.width / 4,
         body: _pageBody,
         bottomNavigationBar: bottomNavigationBar,
         floatingActionButton: floatingActionButton,

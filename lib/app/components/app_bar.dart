@@ -12,7 +12,7 @@ class AppAppBar extends AppBar {
   final AppPageDetail pageDetail;
   final Widget? barLeading;
   final Widget? barAction;
-
+ 
   @override
   Widget? get title =>
       Text(pageDetail.pageName ?? '', style: AppTextStyles.appBarTitle);
