@@ -5,12 +5,20 @@ import 'package:language_learning_assistant_app/app/components/main_components/a
 import 'package:language_learning_assistant_app/app/components/main_components/app_drawer.dart';
 import 'package:language_learning_assistant_app/app/controllers/list_controller.dart';
 import 'package:language_learning_assistant_app/core/elements/core_view.dart';
+import 'package:language_learning_assistant_app/data/extensions/data_types_extensions/extension_icon.dart';
 import 'package:language_learning_assistant_app/data/resources/app_elements.dart';
 import 'package:language_learning_assistant_app/data/resources/app_icons.dart';
+import 'package:language_learning_assistant_app/data/resources/app_paddings.dart';
+import 'package:language_learning_assistant_app/data/resources/app_sizes.dart';
+import 'package:language_learning_assistant_app/data/resources/app_text_styles.dart';
+import 'package:language_learning_assistant_app/data/resources/app_texts.dart';
 
 abstract class ListViewPage<Controller extends ListController>
     extends CoreView<Controller> {
   const ListViewPage({Key? key}) : super(key: key);
+
+  @override
+  EdgeInsets? get pagePadding => AppPaddings.zero;
 
   @override
   PreferredSizeWidget? get appBar =>
@@ -25,40 +33,44 @@ abstract class ListViewPage<Controller extends ListController>
 
   @override
   Widget get body =>
-      controller.listItems == null ? widgetEmpty() : widgetListItems();
+      controller.listItems.isEmpty ? widgetEmpty() : widgetListItems();
 
-  Widget widgetEmpty() => Container(child: Text('Empty'));
+  Widget widgetEmpty() => const Text('Empty');
 
-  Widget widgetListItems() => DataTable(columns: dataColumns, rows: dataRows);
+  Widget widgetListItems() => DataTable(
+      columns: dataColumns,
+      rows: dataRows,
+      horizontalMargin: AppSizes.listPageTableHorizontalMargin,
+      headingRowHeight: AppSizes.listPageTableHeadingRowHeight,
+      showBottomBorder: true);
 
   List<DataColumn> get dataColumns => [DataColumn(label: searchBox())];
 
   List<DataRow> get dataRows => List<DataRow>.generate(
-      controller.listItems == null ? 0 : controller.listItems!.length,
-      (index) => DataRow(cells: [createItem(controller.listItems![index])]));
+      controller.listItems.isEmpty ? 0 : controller.listItems.length,
+      (index) => DataRow(cells: [createItem(controller.listItems[index])]));
 
   DataCell createItem(String item) => DataCell(Row(children: [Text(item)]));
 
-  Widget searchBox() => Container(
-      width: Get.width - 200,
+  Widget searchBox() => Obx(() => Container(
+      width: Get.width,
       decoration: AppElements.listPageSearchBox,
       child: TextField(
-        maxLines: 1,
-        controller: controller.controllerSearch,
-        showCursor: true,
-        textAlignVertical: TextAlignVertical.center,
-        decoration: InputDecoration(
-          contentPadding: EdgeInsets.only(left: 20),
-          suffixIcon: searchBoxSuffixIcon,
-          hintText: "Search ...",
-        ),
-        onChanged: (value) => controller.searchOnChanged(value),
-      ));
+          maxLines: 1,
+          controller: controller.controllerSearch,
+          showCursor: true,
+          textAlignVertical: TextAlignVertical.center,
+          decoration: InputDecoration(
+              border: InputBorder.none,
+              contentPadding: AppPaddings.listPageSearchBox,
+              suffixIcon: searchBoxSuffixIcon(),
+              hintText: AppTexts.listPageSearchBoxHint,
+              hintStyle: AppTextStyles.listPageSearchBoxHint),
+          onChanged: (value) => controller.searchOnChanged(value))));
 
-  Widget get searchBoxSuffixIcon => controller.controllerSearch.text.isEmpty
-      ? AppIcons.listSearch
+  Widget searchBoxSuffixIcon() => controller.searchString.value.isEmpty
+      ? AppIcons.listSearch.withAppDefaultColor
       : InkWell(
           onTap: controller.searchClear,
-          child: AppIcons.listSearchRemove,
-        );
+          child: AppIcons.listSearchRemove.withAppDefaultColor);
 }
