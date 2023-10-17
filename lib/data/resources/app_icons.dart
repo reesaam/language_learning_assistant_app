@@ -27,4 +27,8 @@ class AppIcons {
   static Icon get bottomNavigationVerbs => verbs;
   static Icon get bottomNavigationSaved => saved;
   static Icon get bottomNavigationSettings => settings;
+
+  ///List
+  static Icon get listSearch => const Icon(Icons.search_rounded);
+  static Icon get listSearchRemove => const Icon(Icons.clear_rounded);
 }

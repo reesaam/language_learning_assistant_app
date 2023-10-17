@@ -42,6 +42,7 @@ class AppElements {
 
   ///Shapes
   static BoxDecoration get shapeBoxDecoration => BoxDecoration(borderRadius: AppElements.defaultBorderWithRadius);
+  static BoxDecoration get listPageSearchBox => BoxDecoration(border: Border.all(color: AppColors.appDefaultColor));
 
   ///RoundedRectangleBorder
   static RoundedRectangleBorder get defaultBorderShape => defaultBorderNormalRadiusShape;
