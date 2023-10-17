@@ -795,3 +795,133 @@ abstract class _GermanVerb implements GermanVerb {
   _$$GermanVerbImplCopyWith<_$GermanVerbImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+GermanVerbsList _$GermanVerbsListFromJson(Map<String, dynamic> json) {
+  return _GermanVerbsList.fromJson(json);
+}
+
+/// @nodoc
+mixin _$GermanVerbsList {
+  List<GermanVerb> get germanVerbsList => throw _privateConstructorUsedError;
+  set germanVerbsList(List<GermanVerb> value) =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GermanVerbsListCopyWith<GermanVerbsList> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GermanVerbsListCopyWith<$Res> {
+  factory $GermanVerbsListCopyWith(
+          GermanVerbsList value, $Res Function(GermanVerbsList) then) =
+      _$GermanVerbsListCopyWithImpl<$Res, GermanVerbsList>;
+  @useResult
+  $Res call({List<GermanVerb> germanVerbsList});
+}
+
+/// @nodoc
+class _$GermanVerbsListCopyWithImpl<$Res, $Val extends GermanVerbsList>
+    implements $GermanVerbsListCopyWith<$Res> {
+  _$GermanVerbsListCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? germanVerbsList = null,
+  }) {
+    return _then(_value.copyWith(
+      germanVerbsList: null == germanVerbsList
+          ? _value.germanVerbsList
+          : germanVerbsList // ignore: cast_nullable_to_non_nullable
+              as List<GermanVerb>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$GermanVerbsListImplCopyWith<$Res>
+    implements $GermanVerbsListCopyWith<$Res> {
+  factory _$$GermanVerbsListImplCopyWith(_$GermanVerbsListImpl value,
+          $Res Function(_$GermanVerbsListImpl) then) =
+      __$$GermanVerbsListImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<GermanVerb> germanVerbsList});
+}
+
+/// @nodoc
+class __$$GermanVerbsListImplCopyWithImpl<$Res>
+    extends _$GermanVerbsListCopyWithImpl<$Res, _$GermanVerbsListImpl>
+    implements _$$GermanVerbsListImplCopyWith<$Res> {
+  __$$GermanVerbsListImplCopyWithImpl(
+      _$GermanVerbsListImpl _value, $Res Function(_$GermanVerbsListImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? germanVerbsList = null,
+  }) {
+    return _then(_$GermanVerbsListImpl(
+      germanVerbsList: null == germanVerbsList
+          ? _value.germanVerbsList
+          : germanVerbsList // ignore: cast_nullable_to_non_nullable
+              as List<GermanVerb>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$GermanVerbsListImpl implements _GermanVerbsList {
+  _$GermanVerbsListImpl({this.germanVerbsList = const <GermanVerb>[]});
+
+  factory _$GermanVerbsListImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GermanVerbsListImplFromJson(json);
+
+  @override
+  @JsonKey()
+  List<GermanVerb> germanVerbsList;
+
+  @override
+  String toString() {
+    return 'GermanVerbsList(germanVerbsList: $germanVerbsList)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GermanVerbsListImplCopyWith<_$GermanVerbsListImpl> get copyWith =>
+      __$$GermanVerbsListImplCopyWithImpl<_$GermanVerbsListImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GermanVerbsListImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _GermanVerbsList implements GermanVerbsList {
+  factory _GermanVerbsList({List<GermanVerb> germanVerbsList}) =
+      _$GermanVerbsListImpl;
+
+  factory _GermanVerbsList.fromJson(Map<String, dynamic> json) =
+      _$GermanVerbsListImpl.fromJson;
+
+  @override
+  List<GermanVerb> get germanVerbsList;
+  set germanVerbsList(List<GermanVerb> value);
+  @override
+  @JsonKey(ignore: true)
+  _$$GermanVerbsListImplCopyWith<_$GermanVerbsListImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

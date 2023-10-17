@@ -18,3 +18,13 @@ class GermanWord with _$GermanWord {
   factory GermanWord.fromJson(Map<String, dynamic> json) =>
       _$GermanWordFromJson(json);
 }
+
+@unfreezed
+class GermanWordsList with _$GermanWordsList {
+  factory GermanWordsList({
+    @Default(<GermanWord>[]) List<GermanWord> germanWordsList
+  }) = _GermanWordsList;
+
+  factory GermanWordsList.fromJson(Map<String, dynamic> json) =>
+      _$GermanWordsListFromJson(json);
+}

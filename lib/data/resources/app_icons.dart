@@ -9,6 +9,7 @@ class AppIcons {
   static Icon get close => const Icon(Icons.close_rounded);
   static Icon get version => const Icon(Icons.info_outline_rounded);
   static Icon get threeDots => const Icon(Icons.more_vert);
+  static Icon get add => const Icon(Icons.add);
 
   ///Icons
   static Icon get home => const Icon(Icons.home_rounded);

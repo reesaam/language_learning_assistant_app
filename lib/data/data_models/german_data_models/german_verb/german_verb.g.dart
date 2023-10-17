@@ -102,3 +102,18 @@ Map<String, dynamic> _$$GermanVerbImplToJson(_$GermanVerbImpl instance) =>
       'conjunctive2Future2': instance.conjunctive2Future2,
       'imperativePresent': instance.imperativePresent,
     };
+
+_$GermanVerbsListImpl _$$GermanVerbsListImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GermanVerbsListImpl(
+      germanVerbsList: (json['germanVerbsList'] as List<dynamic>?)
+              ?.map((e) => GermanVerb.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <GermanVerb>[],
+    );
+
+Map<String, dynamic> _$$GermanVerbsListImplToJson(
+        _$GermanVerbsListImpl instance) =>
+    <String, dynamic>{
+      'germanVerbsList': instance.germanVerbsList,
+    };

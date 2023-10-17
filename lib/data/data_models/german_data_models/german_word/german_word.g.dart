@@ -35,3 +35,18 @@ Map<String, dynamic> _$$GermanWordImplToJson(_$GermanWordImpl instance) =>
       'antonyms': instance.antonyms,
       'examples': instance.examples,
     };
+
+_$GermanWordsListImpl _$$GermanWordsListImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GermanWordsListImpl(
+      germanWordsList: (json['germanWordsList'] as List<dynamic>?)
+              ?.map((e) => GermanWord.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <GermanWord>[],
+    );
+
+Map<String, dynamic> _$$GermanWordsListImplToJson(
+        _$GermanWordsListImpl instance) =>
+    <String, dynamic>{
+      'germanWordsList': instance.germanWordsList,
+    };

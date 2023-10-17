@@ -34,3 +34,13 @@ class GermanVerb with _$GermanVerb {
   factory GermanVerb.fromJson(Map<String, dynamic> json) =>
       _$GermanVerbFromJson(json);
 }
+
+@unfreezed
+class GermanVerbsList with _$GermanVerbsList {
+  factory GermanVerbsList({
+    @Default(<GermanVerb>[]) List<GermanVerb> germanVerbsList
+  }) = _GermanVerbsList;
+
+  factory GermanVerbsList.fromJson(Map<String, dynamic> json) =>
+      _$GermanVerbsListFromJson(json);
+}
