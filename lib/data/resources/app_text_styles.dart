@@ -31,6 +31,9 @@ class AppTextStyles {
   static TextStyle get dialogAlertTitle => TextStyle(fontSize: titleSize);
   static TextStyle get dialogAlertText => TextStyle(fontSize: normalSize, color: AppColors.textNormal);
 
+  ///ListPage
+  static TextStyle get listPageSearchBoxHint => TextStyle(color: AppColors.appDefaultColor);
+
   ///Settings
   static TextStyle get settingsSectionTitle => TextStyle(fontSize: bigSize, color: AppColors.settingTitle);
   static TextStyle get settingsSectionItem => TextStyle(color: AppColors.settingItem);

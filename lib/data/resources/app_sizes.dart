@@ -19,4 +19,8 @@ class AppSizes {
   ///Homepage
   static double get homepageLogo => 60;
   static double get homepageSettingIcon => 15;
+
+  ///ListPage
+  static double get listPageTableHorizontalMargin => 10;
+  static double get listPageTableHeadingRowHeight => 40;
 }

@@ -38,11 +38,12 @@ class AppElements {
   static OutlineInputBorder get cardTransparentOutlineBorderZeroRadius => OutlineInputBorder(borderRadius: defaultBorderWithNoRadius, borderSide: cardTransparentBorderSide);
 
   ///BoxBorder
+  static BoxBorder get boxBorderTransparent => Border.all(color: AppColors.transparent);
   static BoxBorder get boxBorder => Border.all(color: AppColors.cardBackground);
 
   ///Shapes
   static BoxDecoration get shapeBoxDecoration => BoxDecoration(borderRadius: AppElements.defaultBorderWithRadius);
-  static BoxDecoration get listPageSearchBox => BoxDecoration(border: Border.all(color: AppColors.appDefaultColor));
+  static BoxDecoration get listPageSearchBox => BoxDecoration(border: Border.all(color: AppColors.transparent));
 
   ///RoundedRectangleBorder
   static RoundedRectangleBorder get defaultBorderShape => defaultBorderNormalRadiusShape;

@@ -32,26 +32,13 @@ class AppTexts {
   static String get areYouSure => 'Are you sure ?';
   static String get appExit => 'App Exit';
 
-  ///Update
-  static String get updateAppFilename => 'paria_app.apk';
-  static String get updateNewVersion => 'New Version Found';
-  static String get updateApprove => 'Do you want to download the New Version?';
-  static String get updateCheckingUpdate => 'Checking for any Available Update ...';
-  static String get updateUpdateFound => 'New Update is Available!';
-  static String get updateNoUpdateFound => 'There is not any Update Available!';
-  static String get updateDownloading => 'Downloading ...';
-  static String get updateDownloaded => 'Update Downloaded!';
-  static String get updateInstallationTitle => 'Update Installation';
-  static String get updateInstallationContent => 'Do you want to install the Update?\n\nWarning: Application will close!';
-  static String get updateDirectoryNotFoundTitle => 'Directory Error!';
-  static String get updateDirectoryNotFoundContent => 'There is not any Directory available to store Data';
-  static String get updateFileNotFoundTitle => 'File Error!';
-  static String get updateFileNotFoundContent => 'File not found';
-
   ///Homepage
   static String get homepageDateTimeTitle => 'Today';
   static String get homepageSummaryTitle => 'App Summary';
   static List<String> get homepageSummaryItems => ['Words:', 'Verbs:', 'Saved:'];
+
+  ///ListPage
+  static String get listPageSearchBoxHint => 'Search ...';
 
   ///Settings
   static String get settingAppbarMenuResetSettings => 'Reset All Settings';
@@ -78,8 +65,22 @@ class AppTexts {
   static String get settingBackupFilename => 'LLAA_Backup.json';
 
   ///Update
+  static String get updateAppFilename => 'LLAA_app.apk';
   static String get updateCurrentVersion => 'Current Version:';
   static String get updateAvailableVersion => 'New Available Version:';
   static String get updateCheckUpdate => 'Check Update';
   static String get updateDownloadUpdate => 'Download Update';
+  static String get updateNewVersion => 'New Version Found';
+  static String get updateApprove => 'Do you want to download the New Version?';
+  static String get updateCheckingUpdate => 'Checking for any Available Update ...';
+  static String get updateUpdateFound => 'New Update is Available!';
+  static String get updateNoUpdateFound => 'There is not any Update Available!';
+  static String get updateDownloading => 'Downloading ...';
+  static String get updateDownloaded => 'Update Downloaded!';
+  static String get updateInstallationTitle => 'Update Installation';
+  static String get updateInstallationContent => 'Do you want to install the Update?\n\nWarning: Application will close!';
+  static String get updateDirectoryNotFoundTitle => 'Directory Error!';
+  static String get updateDirectoryNotFoundContent => 'There is not any Directory available to store Data';
+  static String get updateFileNotFoundTitle => 'File Error!';
+  static String get updateFileNotFoundContent => 'File not found';
 }

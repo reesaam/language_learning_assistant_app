@@ -25,6 +25,9 @@ class AppPaddings {
   static EdgeInsets get homepageDateTimeCard => const EdgeInsets.fromLTRB(0, 20, 0, 20);
   static EdgeInsets get homepageDateTimeCardSettingIcon => const EdgeInsets.fromLTRB(0, 10, 10, 0);
 
+  ///ListPage
+  static EdgeInsets get listPageSearchBox => const EdgeInsets.only(bottom: 10);
+
   ///Settings
   static EdgeInsets get settingsSection => const EdgeInsets.fromLTRB(0, 20, 0, 10);
   static EdgeInsets get settingsItem => const EdgeInsets.fromLTRB(15, 10, 15, 10);
