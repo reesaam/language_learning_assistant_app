@@ -47,11 +47,6 @@ class UpdateController extends CoreController {
     await checkUpdate();
   }
 
-  @override
-  void onCloseFunction() {
-    saveAppData();
-  }
-
   checkUpdate() async {
     AppDialogs.appBottomDialogWithoutButton(AppTexts.updateCheckingUpdate,
         AppProgressIndicator.linearDefault(), false);

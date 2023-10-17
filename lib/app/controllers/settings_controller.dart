@@ -44,12 +44,8 @@ class SettingsController extends CoreController {
   }
 
   @override
-  void onReadyFunction() {}
-
-  @override
   void onCloseFunction() {
     saveSettings();
-    saveAppData();
   }
 
   fillData() {

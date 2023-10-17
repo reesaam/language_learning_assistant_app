@@ -17,21 +17,6 @@ class UpdatePage extends CoreView<UpdateController> {
       AppAppBar(pageDetail: controller.pageDetail);
 
   @override
-  Widget? get drawer => null;
-
-  @override
-  Widget? get topBar => null;
-
-  @override
-  Widget? get footer => null;
-
-  @override
-  Widget? get bottomNavigationBar => null;
-
-  @override
-  Widget? get floatingActionButton => null;
-
-  @override
   Widget get body =>
       Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         widgetVersions(),

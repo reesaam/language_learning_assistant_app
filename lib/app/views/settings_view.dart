@@ -23,17 +23,8 @@ class SettingsPage extends CoreView<SettingsController> {
   Widget? get drawer => const AppDrawer();
 
   @override
-  Widget? get topBar => null;
-
-  @override
-  Widget? get footer => null;
-
-  @override
   Widget? get bottomNavigationBar => AppBottomNavigationBar(
       selectedIndex: controller.pageDetail.bottomBarItemNumber);
-
-  @override
-  Widget? get floatingActionButton => null;
 
   @override
   Widget get body => Column(children: [

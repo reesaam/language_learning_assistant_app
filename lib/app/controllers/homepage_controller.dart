@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:get/get.dart';
-import 'package:language_learning_assistant_app/core/app_core_functions.dart';
 import 'package:language_learning_assistant_app/core/elements/core_controller.dart';
 import 'package:language_learning_assistant_app/data/extensions/data_types_extensions/extension_date_time.dart';
 import 'package:language_learning_assistant_app/data/info/app_page_details.dart';
@@ -27,14 +26,6 @@ class HomePageController extends CoreController {
   @override
   void onInitFunction() {
     timeUpdate();
-  }
-
-  @override
-  void onReadyFunction() {}
-
-  @override
-  void onCloseFunction() {
-    saveAppData();
   }
 
   void timeUpdate() => Timer.periodic(const Duration(seconds: 1), (timer) {

@@ -14,13 +14,16 @@ abstract class CoreView<Controller extends CoreController>
   Future<bool> onWillPop() async => onBackButtonPressed(controller.pageDetail);
 
   ///Main Widgets
-  PreferredSizeWidget? get appBar;
-  Widget? get drawer;
+  PreferredSizeWidget? get appBar => null;
+  Widget? get drawer => null;
   Widget get body;
-  Widget? get topBar;
-  Widget? get footer;
-  Widget? get bottomNavigationBar;
-  Widget? get floatingActionButton;
+  Widget? get topBar => null;
+  Widget? get footer => null;
+  Widget? get bottomNavigationBar => null;
+  Widget? get floatingActionButton => null;
+
+  ///Variables
+  EdgeInsets? get pagePadding => null;
 
   @override
   Widget build(BuildContext context) =>
@@ -44,7 +47,7 @@ abstract class CoreView<Controller extends CoreController>
           //Main Body
           Expanded(
               child: Padding(
-                  padding: AppPaddings.pages,
+                  padding: pagePadding ?? AppPaddings.pages,
                   child: SingleChildScrollView(
                       scrollDirection: Axis.vertical,
                       physics: const BouncingScrollPhysics(),

@@ -29,14 +29,8 @@ class HomePage extends CoreView<HomePageController> {
   Widget? get topBar => widgetTopBar();
 
   @override
-  Widget? get footer => null;
-
-  @override
   Widget? get bottomNavigationBar => AppBottomNavigationBar(
       selectedIndex: controller.pageDetail.bottomBarItemNumber);
-
-  @override
-  Widget? get floatingActionButton => null;
 
   @override
   Widget get body => Column(
