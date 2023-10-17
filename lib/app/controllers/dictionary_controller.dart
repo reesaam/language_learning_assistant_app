@@ -7,4 +7,5 @@ class DictionaryController extends ListController {
   @override
   AppPageDetail get pageDetail => AppPageDetails.dictionary;
 
+  addWord() {}
 }

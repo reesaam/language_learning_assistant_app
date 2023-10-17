@@ -6,4 +6,6 @@ class VerbsController extends ListController {
 
   @override
   AppPageDetail get pageDetail => AppPageDetails.verbs;
+
+  addVerb() {}
 }
