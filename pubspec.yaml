@@ -15,6 +15,7 @@ dependencies:
   freezed: ^2.3.2
   shared_preferences: ^2.2.0
   permission_handler: ^10.2.0
+  html: ^0.15.0
   http: ^0.13.5
   dio: ^5.3.2
   open_file_plus: ^3.4.1
@@ -23,6 +24,7 @@ dependencies:
   path_provider: ^2.0.12
   url_strategy: ^0.2.0
   intl: ^0.18.1
+  timezone: ^0.8.0
   auto_size_text: ^3.0.0
   flutter_animate: ^4.1.0
   loading_animation_widget: ^1.2.0+4
