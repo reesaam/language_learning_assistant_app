@@ -1,6 +1,7 @@
 import 'package:http/http.dart' as http;
 import 'package:html/dom.dart' as dom;
 import 'package:html/parser.dart' as parser;
+import 'package:language_learning_assistant_app/data/contents_providers/german_content_providers/german_translation_providers/german_word_translate_reverso.dart';
 import 'package:language_learning_assistant_app/data/data_models/german_data_models/german_verb/german_verb.dart';
 import 'package:language_learning_assistant_app/data/data_models/german_data_models/german_verb_structure/german_verb_structure.dart';
 
