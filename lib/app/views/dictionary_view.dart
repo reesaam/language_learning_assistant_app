@@ -3,9 +3,10 @@ import 'package:language_learning_assistant_app/app/components/main_components/a
 import 'package:language_learning_assistant_app/app/components/main_components/app_bottom_navigation_bar.dart';
 import 'package:language_learning_assistant_app/app/components/main_components/app_drawer.dart';
 import 'package:language_learning_assistant_app/app/controllers/dictionary_controller.dart';
+import 'package:language_learning_assistant_app/app/views/list_view.dart';
 import 'package:language_learning_assistant_app/core/elements/core_view.dart';
 
-class DictionaryPage extends CoreView<DictionaryController> {
+class DictionaryPage extends ListViewPage<DictionaryController> {
   const DictionaryPage({Key? key}) : super(key: key);
 
   @override
