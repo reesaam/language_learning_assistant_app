@@ -12,6 +12,10 @@ extension Storage on AppSettingData {
   AppSettingData get loadFromStorage => AppLocalStorage.to.loadSettings();
 }
 
+extension RxClear on Rx<AppSettingData> {
+  Rx<AppSettingData> get clearData => const AppSettingData(darkMode: false).obs;
+}
+
 extension Clear on AppSettingData {
   AppSettingData get clearData => const AppSettingData(darkMode: false);
 }
