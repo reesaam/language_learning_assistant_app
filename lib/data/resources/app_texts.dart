@@ -39,6 +39,10 @@ class AppTexts {
   ///ListPage
   static String get listPageSearchBoxHint => 'Search ...';
 
+  ///Words Page
+  static String get wordsAddNewWordTitle => 'Add New Word';
+  static String get wordsAddNewWordHint => 'Enter a Word';
+
   ///Settings
   static String get settingAppbarMenuResetSettings => 'Reset All Settings';
 

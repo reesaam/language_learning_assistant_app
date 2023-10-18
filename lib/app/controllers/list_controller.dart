@@ -4,6 +4,7 @@ import 'package:language_learning_assistant_app/core/app_core_functions.dart';
 import 'package:language_learning_assistant_app/core/elements/core_controller.dart';
 
 class ListController extends CoreController {
+
   RxList<String> listItems = List<String>.empty(growable: true).obs;
   TextEditingController controllerSearch = TextEditingController();
   Rx<String> searchString = ''.obs;
@@ -30,7 +31,8 @@ class ListController extends CoreController {
     appDebugPrint(listItems.length);
     searchString.value.isEmpty
         ? null
-        : listItems.value = ['Web'];
+        : listItems.value = ['Web', 'WE'];
+    listItems.value = ['Web', 'WE'];
     appDebugPrint(listItems);
     appDebugPrint(listItems.length);
     refresh();

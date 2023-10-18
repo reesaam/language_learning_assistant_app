@@ -11,7 +11,7 @@ class VerbsController extends ListController {
   @override
   RxList<String> get listItems => fillList();
 
-  fillList() => ['verb 1', 'verb 2'].obs;
+  fillList() => ['essen', 'fahren'].obs;
 
   addVerb() {}
 }
