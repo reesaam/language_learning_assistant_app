@@ -20,7 +20,7 @@ enum AppCalendarTypes {
 }
 
 enum AppStorageKeys {
-  keyDictionary,
+  keyWords,
   keyVerbs,
   keySaved,
   keySettings,

@@ -110,7 +110,7 @@ class SettingsController extends CoreController {
 
   functionClearDictionary() {
     function() {
-      AppLocalStorage.to.clearSpecificKey(AppStorageKeys.keyDictionary);
+      AppLocalStorage.to.clearSpecificKey(AppStorageKeys.keyWords);
       popPage();
       appDebugPrint('Dictionary Items Cleared');
     }
