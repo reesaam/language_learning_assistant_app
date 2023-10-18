@@ -116,9 +116,9 @@ class SettingsPage extends CoreView<SettingsController> {
             AppTexts.settingSectionTitleStorage),
         [
           SettingsComponents.widgetSettingItem(
-              AppTexts.settingSectionStorageItemEraseDictionary,
+              AppTexts.settingSectionStorageItemEraseWords,
               null,
-              controller.functionClearDictionary),
+              controller.functionClearWords),
           SettingsComponents.widgetSettingItem(
               AppTexts.settingSectionStorageItemEraseVerbs,
               null,

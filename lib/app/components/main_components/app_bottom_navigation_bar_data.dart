@@ -11,9 +11,9 @@ class AppBottomNavigationBarData {
         _generateBottomNavigationBarItem(AppBottomNavigationPages.homepage,
             AppPageDetails.homepage.pageName),
 
-        ///Dictionary
-        _generateBottomNavigationBarItem(AppBottomNavigationPages.dictionary,
-            AppPageDetails.dictionary.pageName),
+        ///Words
+        _generateBottomNavigationBarItem(AppBottomNavigationPages.words,
+            AppPageDetails.words.pageName),
 
         ///Verbs
         _generateBottomNavigationBarItem(
@@ -44,8 +44,8 @@ class AppBottomNavigationBarData {
       case (AppBottomNavigationPages.homepage):
         icon = AppIcons.bottomNavigationHomepage;
         break;
-      case (AppBottomNavigationPages.dictionary):
-        icon = AppIcons.bottomNavigationDictionary;
+      case (AppBottomNavigationPages.words):
+        icon = AppIcons.bottomNavigationWords;
         break;
       case (AppBottomNavigationPages.verbs):
         icon = AppIcons.bottomNavigationVerbs;

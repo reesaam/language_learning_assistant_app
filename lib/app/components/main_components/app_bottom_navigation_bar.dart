@@ -21,7 +21,7 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
     selectedIndex.value = index;
     switch(index) {
       case 0 : goToPage(AppPageDetails.homepage);
-      case 1 : goToPage(AppPageDetails.dictionary);
+      case 1 : goToPage(AppPageDetails.words);
       case 2 : goToPage(AppPageDetails.verbs);
       case 3 : goToPage(AppPageDetails.saved);
       case 4 : goToPage(AppPageDetails.settings);

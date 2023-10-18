@@ -2,7 +2,6 @@ class AppTexts {
   ///App Pages
   static String get pageHomepage => 'Home';
   static String get pageSplashScreen => 'Splash Screen';
-  static String get pageDictionary => 'Dic';
   static String get pageVerbs => 'Verbs';
   static String get pageWords => 'Words';
   static String get pageSaved => 'Saved';
@@ -57,7 +56,7 @@ class AppTexts {
   static String get settingSectionBackupRestore => 'Restore Data';
 
   static String get settingSectionTitleStorage => 'Storage';
-  static String get settingSectionStorageItemEraseDictionary => 'Erase Dictionary Items';
+  static String get settingSectionStorageItemEraseWords => 'Erase Words Items';
   static String get settingSectionStorageItemEraseVerbs => 'Erase Verbs Items';
   static String get settingSectionStorageItemEraseSaved => 'Erase Saved Items';
   static String get settingSectionStorageItemEraseAllData => 'Erase All Data';

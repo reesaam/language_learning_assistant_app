@@ -108,11 +108,11 @@ class SettingsController extends CoreController {
         AppTexts.warning, AppTexts.areYouSureDataMayLost, function, true);
   }
 
-  functionClearDictionary() {
+  functionClearWords() {
     function() {
       AppLocalStorage.to.clearSpecificKey(AppStorageKeys.keyWords);
       popPage();
-      appDebugPrint('Dictionary Items Cleared');
+      appDebugPrint('Words Items Cleared');
     }
 
     AppDialogs.appAlertDialogWithOkCancel(

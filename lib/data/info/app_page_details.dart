@@ -35,9 +35,9 @@ class AppPageDetails {
     bottomBarItemNumber: 0,
   );
 
-  static AppPageDetail dictionary = AppPageDetail(
-    pageName: AppTexts.pageDictionary,
-    pageRoute: AppRoutes.dictionary,
+  static AppPageDetail words = AppPageDetail(
+    pageName: AppTexts.pageWords,
+    pageRoute: AppRoutes.words,
     bottomBarItemNumber: 1,
   );
 

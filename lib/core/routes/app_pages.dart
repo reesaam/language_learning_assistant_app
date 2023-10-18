@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:language_learning_assistant_app/app/views/about_view.dart';
-import 'package:language_learning_assistant_app/app/views/dictionary_view.dart';
+import 'package:language_learning_assistant_app/app/views/words_view.dart';
 import 'package:language_learning_assistant_app/app/views/homepage_view.dart';
 import 'package:language_learning_assistant_app/app/views/saved_view.dart';
 import 'package:language_learning_assistant_app/app/views/settings_view.dart';
@@ -19,7 +19,7 @@ class AppPages {
         ///Main App Pages
         GetPage(name: AppRoutes.splashScreen, page: SplashScreenPage.new),
         GetPage(name: AppRoutes.homePage, page: HomePage.new),
-        GetPage(name: AppRoutes.dictionary, page: DictionaryPage.new),
+        GetPage(name: AppRoutes.words, page: WordsPage.new),
         GetPage(name: AppRoutes.verbs, page: VerbsPage.new),
         GetPage(name: AppRoutes.saved, page: SavedPage.new),
         GetPage(name: AppRoutes.settings, page: SettingsPage.new),

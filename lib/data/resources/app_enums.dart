@@ -1,8 +1,7 @@
 enum AppBottomNavigationPages {
   homepage,
-  dictionary,
-  verbs,
   words,
+  verbs,
   saved,
   settings,
 }

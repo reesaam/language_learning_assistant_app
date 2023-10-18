@@ -38,7 +38,7 @@ class AppDrawer extends Drawer {
 
   Widget body() => Column(children: [
         _bodyItem(AppPageDetails.homepage, AppIcons.home),
-        _bodyItem(AppPageDetails.dictionary, AppIcons.dictionary),
+        _bodyItem(AppPageDetails.words, AppIcons.words),
         _bodyItem(AppPageDetails.verbs, AppIcons.verbs),
         _bodyItem(AppPageDetails.saved, AppIcons.saved),
         _bodyItem(AppPageDetails.settings, AppIcons.settings),
