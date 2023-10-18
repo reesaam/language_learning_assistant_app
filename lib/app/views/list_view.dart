@@ -52,7 +52,7 @@ abstract class ListViewPage<Controller extends ListController>
 
   DataCell createItem(String item) => DataCell(Row(children: [Text(item)]));
 
-  Widget searchBox() => Obx(() => Container(
+  Widget searchBox() => Container(
       width: Get.width,
       decoration: AppElements.listPageSearchBox,
       child: TextField(
@@ -66,7 +66,7 @@ abstract class ListViewPage<Controller extends ListController>
               suffixIcon: searchBoxSuffixIcon(),
               hintText: AppTexts.listPageSearchBoxHint,
               hintStyle: AppTextStyles.listPageSearchBoxHint),
-          onChanged: (value) => controller.searchOnChanged(value))));
+          onChanged: (value) => controller.searchOnChanged(value)));
 
   Widget searchBoxSuffixIcon() => controller.searchString.value.isEmpty
       ? AppIcons.listSearch.withAppDefaultColor

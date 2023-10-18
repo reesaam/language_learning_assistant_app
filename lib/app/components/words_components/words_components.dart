@@ -9,12 +9,13 @@ import 'package:language_learning_assistant_app/data/storage/app_local_storage.d
 
 class WordsComponents {
   ///Add Word
+  late GermanWord word;
   final TextEditingController _controllerAddWord = TextEditingController();
 
   _addWordDialog() async => await AppDialogs.appBottomDialogWithOkCancel(
       AppTexts.wordsAddNewWordTitle,
       _addWordDialogForm(),
-      _addWordFunction,
+      popPage,
       true);
 
   Widget _addWordDialogForm() => AppTextField(
@@ -22,18 +23,9 @@ class WordsComponents {
       label: AppTexts.wordsAddNewWordTitle,
       hint: AppTexts.wordsAddNewWordHint);
 
-  _addWordFunction() {
-    List<GermanWord> list = List<GermanWord>.empty(growable: true);
-    list.addAll(AppLocalStorage.to.loadWordsList().germanWordsList);
-    list.add(GermanWord(word: _controllerAddWord.text));
-    GermanWordsList newList = GermanWordsList(germanWordsList: list);
-    newList.saveOnStorage;
-    popPage();
-  }
-
-  Future<void> addWord() async {
+  addWord() async {
     await _addWordDialog();
-    appDebugPrint(_controllerAddWord.text);
-    // _addWordFunction();
+    appDebugPrint('Add Word Dialog Closed');
+    return GermanWord(word: _controllerAddWord.text);
   }
 }

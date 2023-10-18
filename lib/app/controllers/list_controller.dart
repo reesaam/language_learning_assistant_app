@@ -10,31 +10,23 @@ class ListController extends CoreController {
   Rx<String> searchString = ''.obs;
 
   @override
-  void dataInit() {
-    // clearAppData();
-  }
-
-  @override
   void pageInit() {}
 
   @override
   void onInitFunction() {}
 
-  listenersInit() {}
+  @override
+  void onCloseFunction() {}
 
   searchClear() => controllerSearch.text = searchString.value = '';
 
   searchOnChanged(String value) {
     searchString.value = value;
-    appDebugPrint(searchString.value);
-    appDebugPrint(listItems);
-    appDebugPrint(listItems.length);
+    appDebugPrint('Search Value: ${searchString.value}');
     searchString.value.isEmpty
         ? null
         : listItems.value = ['Web', 'WE'];
-    listItems.value = ['Web', 'WE'];
     appDebugPrint(listItems);
-    appDebugPrint(listItems.length);
     refresh();
   }
 }
