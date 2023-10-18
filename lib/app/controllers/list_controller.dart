@@ -6,6 +6,7 @@ import 'package:language_learning_assistant_app/core/elements/core_controller.da
 class ListController extends CoreController {
 
   RxList<String> listItems = List<String>.empty(growable: true).obs;
+  RxList<String> defaultList = List<String>.empty(growable: true).obs;
   TextEditingController controllerSearch = TextEditingController();
   Rx<String> searchString = ''.obs;
 
@@ -18,15 +19,25 @@ class ListController extends CoreController {
   @override
   void onCloseFunction() {}
 
-  searchClear() => controllerSearch.text = searchString.value = '';
+  itemOnTap() {}
+
+  itemOnLongTap() {}
+
+  searchClear() {
+    controllerSearch.text = searchString.value = '';
+    listItems.value = defaultList;
+  }
 
   searchOnChanged(String value) {
     searchString.value = value;
     appDebugPrint('Search Value: ${searchString.value}');
     searchString.value.isEmpty
-        ? null
-        : listItems.value = ['Web', 'WE'];
-    appDebugPrint(listItems);
+        ? listItems.value = defaultList
+        : listItems.value = defaultList
+            .where((item) =>
+                item.toLowerCase().contains(searchString.value.toLowerCase()))
+            .toList();
+    appDebugPrint('Items Found: ${listItems.length}');
     refresh();
   }
 }

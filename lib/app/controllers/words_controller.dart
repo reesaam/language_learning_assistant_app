@@ -27,6 +27,7 @@ class WordsController extends ListController {
       list.add(word.word!);
     }
     listItems.value = list;
+    defaultList.value = list;
     appDebugPrint(listItems.length);
     listItems.refresh();
   }

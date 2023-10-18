@@ -48,9 +48,16 @@ abstract class ListViewPage<Controller extends ListController>
 
   List<DataRow> get dataRows => List<DataRow>.generate(
       controller.listItems.isEmpty ? 0 : controller.listItems.length,
-      (index) => DataRow(cells: [createItem(controller.listItems[index])]));
+      (index) =>
+          DataRow(cells: [DataCell(createItem(controller.listItems[index]))]));
 
-  DataCell createItem(String item) => DataCell(Row(children: [Text(item)]));
+  Widget createItem(String item) => InkWell(
+        onTap: controller.itemOnTap,
+        onLongPress: controller.itemOnLongTap,
+        child: Row(children: [
+          Text(item),
+        ]),
+      );
 
   Widget searchBox() => Container(
       width: Get.width,
