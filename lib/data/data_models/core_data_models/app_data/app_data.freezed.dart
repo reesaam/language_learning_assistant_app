@@ -20,6 +20,9 @@ AppData _$AppDataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AppData {
+  GermanWordsList? get wordsList => throw _privateConstructorUsedError;
+  GermanVerbsList? get verbsList => throw _privateConstructorUsedError;
+  GermanWordsList? get savedList => throw _privateConstructorUsedError;
   AppSettingData? get setting => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -32,8 +35,15 @@ abstract class $AppDataCopyWith<$Res> {
   factory $AppDataCopyWith(AppData value, $Res Function(AppData) then) =
       _$AppDataCopyWithImpl<$Res, AppData>;
   @useResult
-  $Res call({AppSettingData? setting});
+  $Res call(
+      {GermanWordsList? wordsList,
+      GermanVerbsList? verbsList,
+      GermanWordsList? savedList,
+      AppSettingData? setting});
 
+  $GermanWordsListCopyWith<$Res>? get wordsList;
+  $GermanVerbsListCopyWith<$Res>? get verbsList;
+  $GermanWordsListCopyWith<$Res>? get savedList;
   $AppSettingDataCopyWith<$Res>? get setting;
 }
 
@@ -50,14 +60,65 @@ class _$AppDataCopyWithImpl<$Res, $Val extends AppData>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? wordsList = freezed,
+    Object? verbsList = freezed,
+    Object? savedList = freezed,
     Object? setting = freezed,
   }) {
     return _then(_value.copyWith(
+      wordsList: freezed == wordsList
+          ? _value.wordsList
+          : wordsList // ignore: cast_nullable_to_non_nullable
+              as GermanWordsList?,
+      verbsList: freezed == verbsList
+          ? _value.verbsList
+          : verbsList // ignore: cast_nullable_to_non_nullable
+              as GermanVerbsList?,
+      savedList: freezed == savedList
+          ? _value.savedList
+          : savedList // ignore: cast_nullable_to_non_nullable
+              as GermanWordsList?,
       setting: freezed == setting
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as AppSettingData?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $GermanWordsListCopyWith<$Res>? get wordsList {
+    if (_value.wordsList == null) {
+      return null;
+    }
+
+    return $GermanWordsListCopyWith<$Res>(_value.wordsList!, (value) {
+      return _then(_value.copyWith(wordsList: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $GermanVerbsListCopyWith<$Res>? get verbsList {
+    if (_value.verbsList == null) {
+      return null;
+    }
+
+    return $GermanVerbsListCopyWith<$Res>(_value.verbsList!, (value) {
+      return _then(_value.copyWith(verbsList: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $GermanWordsListCopyWith<$Res>? get savedList {
+    if (_value.savedList == null) {
+      return null;
+    }
+
+    return $GermanWordsListCopyWith<$Res>(_value.savedList!, (value) {
+      return _then(_value.copyWith(savedList: value) as $Val);
+    });
   }
 
   @override
@@ -80,8 +141,18 @@ abstract class _$$AppDataImplCopyWith<$Res> implements $AppDataCopyWith<$Res> {
       __$$AppDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({AppSettingData? setting});
+  $Res call(
+      {GermanWordsList? wordsList,
+      GermanVerbsList? verbsList,
+      GermanWordsList? savedList,
+      AppSettingData? setting});
 
+  @override
+  $GermanWordsListCopyWith<$Res>? get wordsList;
+  @override
+  $GermanVerbsListCopyWith<$Res>? get verbsList;
+  @override
+  $GermanWordsListCopyWith<$Res>? get savedList;
   @override
   $AppSettingDataCopyWith<$Res>? get setting;
 }
@@ -97,9 +168,24 @@ class __$$AppDataImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? wordsList = freezed,
+    Object? verbsList = freezed,
+    Object? savedList = freezed,
     Object? setting = freezed,
   }) {
     return _then(_$AppDataImpl(
+      wordsList: freezed == wordsList
+          ? _value.wordsList
+          : wordsList // ignore: cast_nullable_to_non_nullable
+              as GermanWordsList?,
+      verbsList: freezed == verbsList
+          ? _value.verbsList
+          : verbsList // ignore: cast_nullable_to_non_nullable
+              as GermanVerbsList?,
+      savedList: freezed == savedList
+          ? _value.savedList
+          : savedList // ignore: cast_nullable_to_non_nullable
+              as GermanWordsList?,
       setting: freezed == setting
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -111,17 +197,24 @@ class __$$AppDataImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$AppDataImpl implements _AppData {
-  const _$AppDataImpl({this.setting});
+  const _$AppDataImpl(
+      {this.wordsList, this.verbsList, this.savedList, this.setting});
 
   factory _$AppDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$AppDataImplFromJson(json);
 
   @override
+  final GermanWordsList? wordsList;
+  @override
+  final GermanVerbsList? verbsList;
+  @override
+  final GermanWordsList? savedList;
+  @override
   final AppSettingData? setting;
 
   @override
   String toString() {
-    return 'AppData(setting: $setting)';
+    return 'AppData(wordsList: $wordsList, verbsList: $verbsList, savedList: $savedList, setting: $setting)';
   }
 
   @JsonKey(ignore: true)
@@ -139,10 +232,20 @@ class _$AppDataImpl implements _AppData {
 }
 
 abstract class _AppData implements AppData {
-  const factory _AppData({final AppSettingData? setting}) = _$AppDataImpl;
+  const factory _AppData(
+      {final GermanWordsList? wordsList,
+      final GermanVerbsList? verbsList,
+      final GermanWordsList? savedList,
+      final AppSettingData? setting}) = _$AppDataImpl;
 
   factory _AppData.fromJson(Map<String, dynamic> json) = _$AppDataImpl.fromJson;
 
+  @override
+  GermanWordsList? get wordsList;
+  @override
+  GermanVerbsList? get verbsList;
+  @override
+  GermanWordsList? get savedList;
   @override
   AppSettingData? get setting;
   @override
