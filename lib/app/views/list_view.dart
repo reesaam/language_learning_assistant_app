@@ -37,12 +37,12 @@ abstract class ListViewPage<Controller extends ListController>
 
   Widget widgetEmpty() => const Text('Empty');
 
-  Widget widgetListItems() => DataTable(
+  Widget widgetListItems() => Obx(() => DataTable(
       columns: dataColumns,
       rows: dataRows,
       horizontalMargin: AppSizes.listPageTableHorizontalMargin,
       headingRowHeight: AppSizes.listPageTableHeadingRowHeight,
-      showBottomBorder: true);
+      showBottomBorder: true));
 
   List<DataColumn> get dataColumns => [DataColumn(label: searchBox())];
 
